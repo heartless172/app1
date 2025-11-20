@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WhatsApp-like Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Startup Animation -->
+  <div id="startup">
+    <img src="rick.gif" alt="Rick Animation">
+  </div>
+
+  <!-- Profile Setup -->
+  <div id="profile-setup" style="display:none;">
+    <h2>Set Your Profile</h2>
+    <input id="username-input" placeholder="Enter your name" />
+    <input id="avatar-input" placeholder="Avatar URL (optional)" />
+    <button id="start-btn">Start Chat</button>
+  </div>
+
+  <!-- Main Chat App -->
+  <div id="chat-app" style="display:none;">
+    <div id="profile">
+      <img src="default-avatar.png" id="profile-img" alt="Profile">
+      <span id="username">User</span>
+    </div>
+
+    <ul id="messages"></ul>
+
+    <form id="chat-form">
+      <input id="message-input" autocomplete="off" placeholder="Type a message..." />
+      <button>Send</button>
+    </form>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
